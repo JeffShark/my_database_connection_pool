@@ -1,0 +1,23 @@
+# --- 编译产物 ---
+pool_demo
+pool_demo.exe
+*.o
+*.obj
+*.exe
+
+# --- 构建目录 ---
+build/
+cmake-build-*/
+out/
+
+# --- IDE / 编辑器 ---
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+
+# --- 系统文件 ---
+Thumbs.db
+.DS_Store
+desktop.ini

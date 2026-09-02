@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build with g++
+        run: g++ -std=c++17 -O2 -Wall -Wextra -pthread main.cpp -o pool_demo
+
+      - name: Run all test cases (exit code 0 = all PASS)
+        run: ./pool_demo
